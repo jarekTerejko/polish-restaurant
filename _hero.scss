@@ -1,0 +1,31 @@
+.hero {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(images/banner.jpg);
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include flex(center, center, column);
+
+  &__btn {
+      border: 2px solid #fff;
+      padding: 20px 30px;
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: rgba(0, 0, 0, 0.3);
+      transition: .3s;
+      transition-property: background;
+
+      &:hover{
+        background: rgba(0, 0, 0, 0.9);
+      }
+  }
+}
