@@ -1,0 +1,46 @@
+.about-us {
+  padding: 6rem 0;
+
+  &__columns {
+    display: flex;
+    align-items: center;
+
+    @include m-q(850px) {
+      display: unset;
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    color: $primary-dark;
+
+    @include m-q(650px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__description {
+    line-height: 1.9;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: $secondary-light;
+
+    @include m-q(650px) {
+      line-height: 1.5;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__img {
+    width: 40%;
+    margin-left: 30px;
+
+    @include m-q(850px) {
+      margin-left: 0;
+      margin: auto;
+      width: 90%;
+    }
+  }
+}

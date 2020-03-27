@@ -1,6 +1,12 @@
 @mixin flex($justify, $align, $direction) {
-    display: flex;  
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin m-q($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
 }
