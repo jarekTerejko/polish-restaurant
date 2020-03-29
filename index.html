@@ -7,14 +7,61 @@
       name="description"
       content="Zapraszamy do jedynej w swoim rodzaju restauracji, gdzie spróbujesz potraw tradycyjnej polskiej kuchni"
     />
+    <script
+      src="https://kit.fontawesome.com/d2a4909307.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Polskie Smaki - najlepsza restauracja w Polsce</title>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__site-link">
+          <img
+            src="/images/logo.svg"
+            alt="logo"
+            class="navbar__logo-img"
+          />Polskie smaki</a
+        >
+        <button class="navbar__nav-trigger">
+          <span class="navbar__line"></span>
+          <span class="navbar__line"></span>
+          <span class="navbar__line"></span>
+        </button>
+        <ul class="navbar__navigation">
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">Home</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#about-us" class="navbar__nav-link">O nas</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">Menu</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">Kontakt</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link">Jak dojechac?</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="#" class="navbar__nav-link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <section class="hero">
       <a href="#about-us" class="hero__btn">Poznaj nas lepiej</a>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="container">
         <div class="about-us__columns">
           <div class="about-us__left">
@@ -41,5 +88,6 @@
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
