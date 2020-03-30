@@ -88,6 +88,7 @@ a {
     border: none;
     background: none;
     display: none;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 
     @include m-q(800px) {
@@ -275,3 +276,74 @@ a {
     }
   }
 }
+
+.bookmark--menu{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url(images/bookmarks/menu.jpg);
+}
+
+.bookmark--gallery{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url(images/bookmarks/gallery.jpg);
+}
+
+.bookmark--contact{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url(images/bookmarks/contact.jpg);
+}
+.bookmark--route{
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)
+  ),
+  url(images/bookmarks/route.jpg);
+}
+
+.bookmark{
+  scroll-margin-top: 6rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  text-align: center;
+  padding: 8vh 5vw;
+
+  &__header{
+    font-size: 10rem;
+    text-transform: uppercase;
+
+    @include m-q(1199px){
+      font-size: 10vw;
+    }
+
+    &::after, &::before{
+      content: ' - ';
+      font-weight: 300;
+    }
+
+  }
+
+  &__description{
+    font-size: 2.4rem;
+
+    @include m-q(767px){
+      font-size: 1.6rem;
+    }
+  }
+}
+
+
