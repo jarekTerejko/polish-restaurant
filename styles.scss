@@ -56,6 +56,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -76,7 +80,7 @@ a {
     align-items: center;
     color: #fff;
     font-size: 1.8rem;
-    text-transform: capitalize;;
+    text-transform: capitalize;
   }
 
   &__logo-img {
@@ -193,7 +197,6 @@ a {
 .navbar__navigation.is-open {
   opacity: 1;
   transform: translateX(0);
-  
 }
 
 .hero {
@@ -277,42 +280,26 @@ a {
   }
 }
 
-.bookmark--menu{
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.8)
-  ),
-  url(images/bookmarks/menu.jpg);
+.bookmark--menu {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(images/bookmarks/menu.jpg);
 }
 
-.bookmark--gallery{
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.8)
-  ),
-  url(images/bookmarks/gallery.jpg);
+.bookmark--gallery {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(images/bookmarks/gallery.jpg);
 }
 
-.bookmark--contact{
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.8)
-  ),
-  url(images/bookmarks/contact.jpg);
+.bookmark--contact {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(images/bookmarks/contact.jpg);
 }
-.bookmark--route{
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.8)
-  ),
-  url(images/bookmarks/route.jpg);
+.bookmark--route {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(images/bookmarks/route.jpg);
 }
 
-.bookmark{
+.bookmark {
   scroll-margin-top: 6rem;
   background-color: rgba(0, 0, 0, 0.9);
   background-size: cover;
@@ -322,28 +309,99 @@ a {
   text-align: center;
   padding: 8vh 5vw;
 
-  &__header{
+  &__header {
     font-size: 10rem;
     text-transform: uppercase;
 
-    @include m-q(1199px){
+    @include m-q(1199px) {
       font-size: 10vw;
     }
 
-    &::after, &::before{
-      content: ' - ';
+    &::after,
+    &::before {
+      content: " - ";
       font-weight: 300;
     }
-
   }
 
-  &__description{
+  &__description {
     font-size: 2.4rem;
 
-    @include m-q(767px){
+    @include m-q(767px) {
       font-size: 1.6rem;
     }
   }
 }
 
+.menu {
+  // @include flex(center, center, row);
+  color: $primary-dark;
+  padding: 100px 0;
 
+  &__cols-wrapper {
+    display: flex;
+    margin: 0 -15px;
+
+    @include m-q(980px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col {
+    flex-basis: 33%;
+    padding: 0 15px;
+
+    @include m-q(980px) {
+      flex-basis: 50%;
+
+    }
+    @include m-q(600px) {
+      flex-basis: 100%;
+
+    }
+  }
+
+  &__heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    @include m-q(930px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__list-item {
+    margin: 3rem 0;
+    @include m-q(930px) {
+      margin: 1rem 0;
+    }
+  }
+
+  &__position {
+    display: flex;
+    margin: 1rem 0;
+    align-items: baseline;
+    font-size: 1.8rem;
+  }
+
+  &__position::after {
+    content: "";
+    margin: 0 0.3rem;
+    border-top: 2px dotted;
+    flex-grow: 1;
+    order: 2;
+  }
+
+  &__position-name {
+    text-transform: uppercase;
+  }
+
+  &__position-price {
+    order: 3;
+  }
+
+  &__ingredients {
+    color: $secondary-light;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+  }
+}
