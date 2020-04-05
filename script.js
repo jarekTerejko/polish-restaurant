@@ -1,3 +1,4 @@
+// mobile navigation
 const navTrigger = document.querySelector(".navbar__nav-trigger");
 const navList = document.querySelector(".navbar__navigation");
 const navLinks = document.querySelectorAll(".navbar__nav-link");
@@ -15,3 +16,9 @@ navTrigger.addEventListener("click", () => {
     });
   }
 });
+
+// footer year
+const yearEl = document.querySelector('.footer__year')
+const now = new Date()
+const year = now.getUTCFullYear()
+yearEl.textContent = year

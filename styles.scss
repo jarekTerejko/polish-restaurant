@@ -524,9 +524,20 @@ ul {
   }
 }
 
-.route{
+.route {
   display: block;
   width: 100%;
   min-height: 50vh;
   border: none;
+}
+
+.footer {
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.95);
+
+  &__copyright {
+    color: $light;
+    font-size: 1.6rem;
+    text-align: center;
+  }
 }
